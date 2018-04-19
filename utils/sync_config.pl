@@ -4,7 +4,7 @@
 # 
 # LosF - a Linux operating system Framework for HPC clusters
 #
-# Copyright (C) 2007-2017 Karl W. Schulz <losf@koomie.com>
+# Copyright (C) 2007-2015 Karl W. Schulz <losf@koomie.com>
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the Version 2 GNU General
@@ -86,6 +86,7 @@ foreach our $node_type (@update_types) {
     parse_and_sync_const_files();
     parse_and_sync_softlinks();
     parse_and_sync_services();
+    parse_and_sync_subscriptions();
     parse_and_sync_permissions();
 
     if($node_type ne $update_types[$#update_types]) {

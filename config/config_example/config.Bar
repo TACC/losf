@@ -148,6 +148,15 @@ openibd        = on
 cgconfig       = off
 mcelogd        = on
 
+# Services may subscribe a file (only 1 allowed at this point due to the parser).
+# If the file timestamp is more recent than when the sevice started then LoSF
+# will restart the service
+
+[Subscriptions]
+
+named          = /etc/named.conf
+iptables       = /etc/sysconfig/iptables
+
 #---------------------------------------------------------------------
 # Directory/File Permissions
 #
